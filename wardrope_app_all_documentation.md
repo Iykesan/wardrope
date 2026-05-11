@@ -151,7 +151,7 @@ This document outlines the recommended technology stack for the initial Minimum 
 | :--- | :--- | :--- |
 | **Local/Global State Management** | React Context API / Zustand (or similar lightweight library) | For a simple application focused on core CRUD and scheduling, a full Redux setup is likely overkill. React Context, potentially augmented by a minimal state manager like Zustand, will handle the state required for viewing the wardrobe, managing the current outfit being built, and tracking selected dates without adding significant boilerplate. |
 | **Forms & Data Entry** | React Hook Form / Zod | Essential for handling the "speed and low friction" data entry philosophy. React Hook Form simplifies form management, and Zod can be used for lightweight, schema-based validation, ensuring clean data before it hits the database, especially for required fields like item name/category. |
-| **Date/Time Handling** | Date-fns or Luxon | Required for the outfit planning feature (assigning outfits to future dates). A lightweight library will handle parsing, formatting, and comparison of dates efficiently. |
+| **Date/Time Handling** | Date-fns or Luxon | Required for the outfit planning feature (assigning outfits to future dates). A lightweight libralsry will handle parsing, formatting, and comparison of dates efficiently. |
 
 ## 5. Future Considerations (Post-MVP Scope)
 
