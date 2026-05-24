@@ -1,37 +1,38 @@
+# Wardrope.app
 
----
+A clean, minimal digital wardrobe to catalog items, build outfits, and plan what to wear next.
 
-## Repo: `wardrope`
+## Quick start
 
-```md
-# Wardrope
-
-Wardrope is a digital wardrobe application designed to help users organize clothing items, create outfits, and eventually receive AI-powered outfit recommendations.
-
-This project started as an idea to reduce decision fatigue by planning outfits ahead of time.
-
-## Features
-
-- Digital clothing inventory
-- Outfit creation and organization
-- Clothing categorization
-- Simple and clean UI
-- Foundation for future AI recommendations
-
-## Planned Features
-
-- AI outfit suggestions
-- Weather-based recommendations
-- Style preference learning
-- Outfit planner/calendar
-- Brand recommendation integrations
-- Social sharing
-
-## Built With
-
-- React
-- JavaScript
-- Vite
-- TensorFlow.js (planned/experimental)
-
+```bash
+npm install
 npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Data modes
+
+The MVP ships in **local** mode by default (localStorage persistence). To connect Supabase:
+
+1. Update `.env.local` with your Supabase credentials.
+2. Set `NEXT_PUBLIC_DATA_MODE=supabase`.
+3. Ensure your Supabase tables match the fields used in `src/server/supabase/queries.ts`.
+
+> Note: If you enable Supabase, the app uses API routes and a service role key. Configure Row Level Security accordingly.
+
+## Project structure
+
+- `src/app` thin route entrypoints and API handlers
+- `src/features` domain-owned screens, components, hooks, and local helpers
+- `src/shared` reusable UI, config, types, styles, and utilities
+- `src/server` Supabase and server-only helpers
+
+## Scripts
+
+```bash
+npm run dev
+npm run build
+npm run start
+npm run lint
+```
