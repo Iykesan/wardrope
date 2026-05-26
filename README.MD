@@ -1,4 +1,4 @@
-# Wardrope.app
+# Wardrobe.app
 
 A clean, minimal digital wardrobe to catalog items, build outfits, and plan what to wear next.
 
